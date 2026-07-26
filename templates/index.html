@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <div class="header-left">
+
+            <h1>Task Manager</h1>
+
+            <p>
+                Manage your daily work efficiently.
+            </p>
+
+        </div>
+
+
+        <div class="header-right">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search Task">
+
+            </div>
+
+        </div>
+
+
+    </header>
+
+
+
+
+    <!-- Add Task -->
+
+    <section class="task-form">
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="What do you want to do today?">
+
+
+        <button id="addBtn">
+
+            <i class="fa-solid fa-plus"></i>
+            Add Task
+
+        </button>
+
+
+    </section>
+
+
+
+
+
+    <!-- Dashboard -->
+
+    <section class="dashboard">
+
+
+        <!-- Task Section -->
+
+        <div class="task-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Today's Tasks
+                </h2>
+
+
+                <span id="taskCount">
+                    0 Tasks
+                </span>
+
+
+            </div>
+
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-list"></i>
+                    All
+                </button>
+                <button class="filter-btn" data-filter="pending">
+                    <i class="fa-solid fa-clock"></i>
+                    Pending
+                </button>
+                <button class="filter-btn" data-filter="completed">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Completed
+                </button>
+            </div>
+
+
+            <div id="taskList">
+
+                <!-- Tasks load here -->
+
+            </div>
+
+
+            <!-- Pagination -->
+            <div id="pagination" class="pagination">
+                <!-- Pagination buttons load here -->
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- Overview -->
+
+        <aside class="overview">
+
+
+            <h2>
+                Overview
+            </h2>
+
+
+
+            <div class="card">
+
+
+                <div class="icon blue">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="total">0</h3>
+
+                    <p>Total Tasks</p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="card">
+
+
+                <div class="icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="completed">0</h3>
+
+                    <p>Completed</p>
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+            <div class="card">
+
+
+                <div class="icon orange">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="pending">0</h3>
+
+                    <p>Pending</p>
+
+                </div>
+
+
+            </div>
+
+
+
+        </aside>
+
+
+
+    </section>
+
+
+
+</div>
+
+
+
+
+
+<!-- Toast Notification -->
+
+<div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span>
+        Task Added Successfully
+    </span>
+
+</div>
+
+
+
+
+
+<script src="/static/script.js"></script>
+
+
+</body>
+
+</html>
